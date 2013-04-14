@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %title Blog
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{ class: "#{params[:controller]}_#{params[:action]}" }
+    .row-fluid
+      #side.span3
+        #about-me.side-block About Me
+        #about-site.side-block About Site
+        #category.side-block Category
+        #rencent-post.side-block 
+          Recent Post
+          - for post in recent_posts
+            .recent-block
+              .block-bg
+              .block-content
+                %h4= link_to post.title, post_path(post)
+                %p= time_tag post.created_at
+        #rencent-comment.side-block Recent Comment
+      #main.span9
+        = yield

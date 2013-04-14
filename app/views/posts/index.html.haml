@@ -1,0 +1,7 @@
+#brand.top-block My Blog
+#posts
+- for post in @posts
+  .post
+    %p.post-time= time_tag post.created_at
+    %h3.post-title= link_to post.title, post_path(post)
+    .post-content= post.body

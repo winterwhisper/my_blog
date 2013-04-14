@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require twitter/bootstrap
+ *= require twitter/bootstrap/_responsive
+ *= require twitter/bootstrap-no-sprites
+ *= require _font-awesome
+ *= require flat-ui
+ *= require_self
+ *= require_tree .
+ */
+a {
+  color: #34495E;
+  text-decoration: none;
+}
+#side {
+  padding: 40px 0 0 40px;
+  .side-block {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  #rencent-post {
+    .recent-block {
+      padding-left: 10px;
+      font-size: 12px;
+      margin-top: 20px;
+      .block-bg {
+        background: #F6F6F6;
+        width: 270px;
+        height: 46px;
+        position: absolute;
+        left: -270px;
+        border-radius: 0 10px 10px 0;
+        z-index: 999;
+      }
+      .block-content {
+        position: relative;
+        z-index: 1000;
+      }
+    }
+  }
+}
+#main {
+  border-left: 1px solid #CCC;
+  min-height: 1000px;
+  .top-block {
+    padding: 40px 0 40px 40px;
+    border-bottom: 1px solid #CCC;
+  }
+}

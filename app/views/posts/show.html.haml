@@ -1,0 +1,13 @@
+#top-info.top-block
+  = time_tag @post.created_at
+
+#post-body
+  %h2#post-title= @post.title
+  %p= @post.body
+
+#comments
+  = render :partial => "shared/disqus", :locals => { title: @post.title }
+
+= link_to 'Edit', edit_post_path(@post)
+\|
+= link_to 'Back', posts_path

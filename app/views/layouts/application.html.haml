@@ -5,7 +5,7 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body{ class: "#{params[:controller]}_#{params[:action]}" }
+  %body{ class: "front #{params[:controller]}_#{params[:action]}" }
     .row-fluid
       #side.span3
         #about-me.side-block About Me

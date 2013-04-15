@@ -1,0 +1,17 @@
+%h1 Listing console_posts
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @console_posts.each do |console_post|
+    %tr
+      %td= link_to 'Show', console_post
+      %td= link_to 'Edit', edit_console_post_path(console_post)
+      %td= link_to 'Destroy', console_post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Post', new_console_post_path
